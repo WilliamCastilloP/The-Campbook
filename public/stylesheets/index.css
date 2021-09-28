@@ -1,0 +1,137 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: rgb(179, 179, 184);
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.1rem rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+
+p.parindex {
+    color: rgb(94, 94, 99);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.rev {
+    background-color: white;
+}
+
+.card {
+    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-width: 100%;
+    height: 300px;
+      
+}
+
+.card-body {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card-footer {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card-text {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+.navbar {
+    background-color: #ece9e6;
+    font-weight: 600;
+}
+
+#button:focus, #button{
+border: none;
+box-shadow: none;
+}
+
+.carousel-inner {
+    width: 100%;
+}
+.carousel-item {
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+}
+
+.showImage {
+    width: 100%;
+    height: 700px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+    box-sizing: none;
+}
+.button-image {
+  position: absolute;
+  top: 95%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: solid 1px white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.showmap {
+    margin-bottom: 0 !important;
+    border: none;
+}
+
+.wrapper {
+    display: inline-block; i !important;
+    text-align: end;
+}
+
+.price {
+    text-align: end;
+    background-color: rgb(54, 154, 248);
+    color: white;
+    font-size: 2rem;
+
+}
+
+.pernight {
+    margin-right: 10px;
+}
+
+.card-footer{
+display: inline;
+}
+
+.buttons {
+    float: right;
+    display: inline;
+}
+
+.index-container {
+    width: 100%
+}
+
+
+

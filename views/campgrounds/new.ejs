@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') %> 
+
+<h1 class="text-center mt-5">New Camp</h1>
+<div class="container">
+<div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
+        <form action="/campgrounds" method="POST" novalidate class="needs-validation"  enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class='form-label' for="title">Title</label>
+                <input class='form-control' type="text" name="camp[title]" id="title" required>
+            </div>
+            <div class="mb-3">
+                <label class='form-label' for="location">Location</label>
+                <input class='form-control' type="text" name="camp[location]" id="location" required>
+            </div>
+            <div class="mb-3">
+                <label class='form-label' for="decription">Description</label>
+                <textarea class='form-control' type="text" name="camp[description]" id="description" required></textarea>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <label for="price" class="form-label"></label>
+                    <input type="text" class="form-control" id="price" name="camp[price]" aria-label="Amount (to the nearest dollar)" required>
+                    <span class="input-group-text">.00</span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Add more image(s)</label>
+                <input class="form-control" name="image" type="file" id="formFileMultiple" multiple required>
+            </div>
+            <div class="d-grid gap-2 mb-1">
+                <button class="btn btn-dark btn-block">Share</button>
+            </div>
+            <a class="d-grid btn btn-outline-danger btn-block" href="/campgrounds">Cancel</a> 
+        </form>
+    </div>
+</div>
+</div>
+

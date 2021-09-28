@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate')  %> 
+<div class="mb-3" id='map' style='width: 100%; height: 500px;'></div>
+<div class="container my-5">
+    <header>
+        <h1><b><i class="fas fa-campground"></i>Campgrounds</b></h1>
+        <p class="parindex">Take a look to our biggest collection of camping sites all across Canada!</p>
+        <!-- <a class="btn btn-dark btn-sm" href="/campgrounds/new"><i class="bi-alarm"></i>Add Camp</a> -->
+    </header>
+</div>
+        <div class="container-fluid index-container">
+            <div class="row">
+                <% for(campground of campgrounds){ %> 
+                <div class="container col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-11 mb-3">
+                    <div class="card border-0 ">
+                        <% if(campground.images.length) { %> 
+                        <a href="/campgrounds/<%=campground._id%>"><img src="<%= campground.images[0].url %> " class="card-img-top" alt="..."></a>
+                        <% } else { %>
+                            <img src="https://res.cloudinary.com/dpr59qtfp/image/upload/v1614013115/Yelpcamp/uhsr0vckdg5xlwrn6qtu.jpg" class="card-img-top"alt="...">
+                            <% } %> 
+                        <div class="card-body">
+                            <div class="">
+                                <h5 class="card-title"><%= campground.title %> </h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>  
+        </div>
+
+        <script>
+            const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
+            const campgrounds = {features: <%- JSON.stringify(campgrounds) %>};
+        </script>
+
+        <script src="/Javascripts/clusterMap.js"></script>

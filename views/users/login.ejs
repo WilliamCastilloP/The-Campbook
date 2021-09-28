@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate')  %> 
+
+<h1 class="text-center my-5"></i><i class="fas fa-campground"></i>Sign In</h1>
+<div class="container">
+    <div class="row justify-content-center">
+    <div class="col-sm-10 col-md-8 col-lg-6 col-xl-6">
+        <div class="card shadow">
+            <div class="card-body">
+        <form action="/login" class="needs-validation" method="POST" novalidate>
+            <div>
+                <label class="form-label" for="username">Username</label>
+                <input class="form-control" type="text" name="username" id="" required autofocus >
+            </div>
+            <div class="mb-3">
+                <label class='form-label' for="password">Password</label>
+                <input class='form-control' type="password" name="password" id="" required >
+            </div>
+            <div class="d-grid gap-2 mb-1">
+                <button class="btn btn-dark btn-block">Sign in</button>
+            </div>
+            <a class="d-grid btn btn-outline-danger btn-block" href="/campgrounds">Cancel</a>
+        </form>
+    </div>
+    </div>
+        <p class="text-center">New to Campbook? <a href="/register">Create an account.</a></p>
+        </div>
+    </div>

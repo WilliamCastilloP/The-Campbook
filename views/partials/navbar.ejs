@@ -1,0 +1,22 @@
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+            <a class="navbar-brand ml-2" href="/campgrounds/thecampbook"><i class="fas fa-campground"></i>The Campbook</a>
+            <button class="navbar-toggler" id="button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-2" id="navbarNav">
+              <div class="navbar-nav">
+                  <a class="nav-link" href="/campgrounds">All Camps<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/campgrounds/new">New Camp</a>
+              </div>
+              <div class="navbar-nav ml-auto">
+              <% if(!currentUser) { %>
+                  <a class="nav-link mr-2" href="/login">SignIn<i class="fas fa-sign-in-alt"></i></a>
+              <% }  if(currentUser) { %>
+                  <a class="nav-link" href="/profile"><b><%= currentUser.username.toUpperCase() %></b></a>
+                  <a class="nav-link" href="/logout">SignOut <i class="fas fa-sign-out-alt"></i></a>
+                  <% } %> 
+              </div>
+              </ul>
+            </div>
+          </nav>
